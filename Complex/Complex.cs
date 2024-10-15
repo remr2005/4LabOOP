@@ -40,7 +40,7 @@ namespace Complex
         /// <returns>String</returns>
         public override string ToString()
         {
-            return $"{this.a}{(this.b >= 0 ? "+" : "")} {this.b}i";
+            return $"{this.a}{(this.b >= 0 ? "+" : "")}{this.b}i";
         }
         /// <summary>
         /// Перевод в экспоненту
