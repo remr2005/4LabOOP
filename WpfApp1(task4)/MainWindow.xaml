@@ -1,0 +1,61 @@
+﻿<Window x:Class="WpfApp1_task4_.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1_task4_"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="900">
+    <Grid>
+        <StackPanel Margin="20">
+            <TextBlock Text="Materials"/>
+            <ListBox Name="MaterialList" SelectionChanged="MaterialList_SelectionChanged">
+                <ListBoxItem>StainlessSteel</ListBoxItem>
+                <ListBoxItem>Aluminium</ListBoxItem>
+                <ListBoxItem>ReinforcedConcrete</ListBoxItem>
+                <ListBoxItem>Composite</ListBoxItem>
+                <ListBoxItem>Titanium</ListBoxItem>
+            </ListBox>
+
+            <TextBlock Text="Cross Section"/>
+            <ListBox Name="CrossList" SelectionChanged="MaterialList_SelectionChanged">
+                <ListBoxItem>IBeam</ListBoxItem>
+                <ListBoxItem>Box</ListBoxItem>
+                <ListBoxItem>ZShaped</ListBoxItem>
+                <ListBoxItem>CShaped</ListBoxItem>
+            </ListBox>
+
+            <TextBlock Text="Test"/>
+            <ListBox Name="TestList" SelectionChanged="MaterialList_SelectionChanged">
+                <ListBoxItem>Pass</ListBoxItem>
+                <ListBoxItem>Fail</ListBoxItem>
+            </ListBox>
+
+            <Label Name="Result" FontSize="16" />
+            <Button Content="Run Test" Click="RunTests_Click"/>
+            <ListBox Name="reasonList" Height="85" Width="857"/>
+        </StackPanel>
+        <Label Content="Pass:" HorizontalAlignment="Left" Margin="20,426,0,0" VerticalAlignment="Top" Height="30" RenderTransformOrigin="0.5,0.5" Width="40">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="Fail:" HorizontalAlignment="Left" Margin="135,428,0,0" VerticalAlignment="Top" Height="45" RenderTransformOrigin="0.5,0.5" Width="40">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Name="Fail_Count" Content="0" HorizontalAlignment="Left" Margin="180,428,0,0" VerticalAlignment="Top" Height="28"/>
+        <Label Name="Pass_Count" Content="0" HorizontalAlignment="Left" Margin="65,428,0,0" VerticalAlignment="Top" Height="28"/>
+    </Grid>
+</Window>
