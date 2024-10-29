@@ -1,38 +1,44 @@
 ﻿using StressTest;
 using System;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 
 namespace Enums
 {
+    /// <summary>
+    /// MainWindow))))
+    /// </summary>
     public partial class MainWindow : Window
     {
+        /// <summary>
+        /// тут идет инициализация
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// логика для ListBoxs
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MaterialList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Result.Content = ""; // Очистить перед добавлением нового текста
-
+            StringBuilder stringBuilder = new StringBuilder();
             if (MaterialList.SelectedItem is ListBoxItem materialItem)
             {
-                Material SelMat = (Material)Enum.Parse(typeof(Material), materialItem.Content.ToString());
-                Result.Content += $"{SelMat} ";
+                stringBuilder.Append($"Material: {(Material)Enum.Parse(typeof(Material), materialItem.Content.ToString())} ");
             }
-
             if (CrossList.SelectedItem is ListBoxItem crossSectionItem)
             {
-                CrossSection SelCroSect = (CrossSection)Enum.Parse(typeof(CrossSection), crossSectionItem.Content.ToString());
-                Result.Content += $"{SelCroSect} ";
+                stringBuilder.Append($"Cross-section: {(CrossSection)Enum.Parse(typeof(CrossSection), crossSectionItem.Content.ToString())} ");
             }
-
             if (TestList.SelectedItem is ListBoxItem testResultItem)
             {
-                TestResult SelTes = (TestResult)Enum.Parse(typeof(TestResult), testResultItem.Content.ToString());
-                Result.Content += $"{SelTes} ";
+                stringBuilder.Append($"Result: {(TestResult)Enum.Parse(typeof(TestResult), testResultItem.Content.ToString())}");
             }
+            Result.Content = stringBuilder.ToString();
         }
     }
 }
