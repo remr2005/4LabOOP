@@ -19,7 +19,6 @@ namespace Vector
         /// <summary>
         /// Конструктор
         /// </summary>
-        /// <param name="arr">Набор значений</param>
         public Vector3D(double x, double y, double z)
         {
             this.x = x;
@@ -29,7 +28,7 @@ namespace Vector
         /// <summary>
         /// 
         /// </summary>
-        readonly double abs { get { return Math.Sqrt(this.x*this.x+this.y*this.y+this.z*this.z); } }
+        public readonly double abs { get { return Math.Sqrt(x*x+y*y+z*z); } }
         /// <summary>
         /// Sum two vectors
         /// </summary>
@@ -84,5 +83,17 @@ namespace Vector
         /// <param name="b">Second vector</param>
         /// <returns>result of != two vectors</returns>
         public static bool operator !=(Vector3D a, Vector3D b) => !(a == b);
+        /// <summary>
+        ///  Is equal?
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public override bool Equals(object? obj) => obj is Vector3D other && this == other;
+        /// <summary>
+        /// hashcode
+        /// </summary>
+        /// <returns></returns>
+        public override int GetHashCode() => HashCode.Combine(x, y, z);
+
     }
 }
