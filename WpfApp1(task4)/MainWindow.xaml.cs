@@ -30,18 +30,9 @@ namespace WpfApp1_task4_
         private void MaterialList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             StringBuilder stringBuilder = new StringBuilder();
-            if (MaterialList.SelectedItem is ListBoxItem materialItem)
-            {
-                stringBuilder.Append($"Material: {materialItem.Content} ");
-            }
-            if (CrossList.SelectedItem is ListBoxItem crossSectionItem)
-            {
-                stringBuilder.Append($"Cross-section: {crossSectionItem.Content} ");
-            }
-            if (TestList.SelectedItem is ListBoxItem testResultItem)
-            {
-                stringBuilder.Append($"Result: {testResultItem.Content}");
-            }
+            stringBuilder.Append(MaterialList.SelectedIndex != -1 ? $"Material: {(Material)MaterialList.SelectedIndex} " : "");
+            stringBuilder.Append(CrossList.SelectedIndex != -1 ? $"Cross-section: {(CrossSection)CrossList.SelectedIndex} " : "");
+            stringBuilder.Append(TestList.SelectedIndex != -1 ? $"Result: {(TestResult)TestList.SelectedIndex}" : "");
             Result.Content = stringBuilder.ToString();
         }
         /// <summary>
