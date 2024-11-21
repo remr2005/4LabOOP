@@ -80,7 +80,7 @@ namespace Vector_Wpf
                 Vector3D EarthVector = new Vector3D(0, 0, EarthAngularVelocity);
                 Vector3D vector1 = new Vector3D(double.Parse(V1.Text), double.Parse(V2.Text), double.Parse(V3.Text));
                 double num = double.Parse(Weight.Text);
-                CoriolisRes.Text = (-2 * num * EarthAngularVelocity * vector1).abs.ToString();
+                CoriolisRes.Text = (2 * num * EarthAngularVelocity * vector1).abs.ToString();
             }
             finally { }
         }
