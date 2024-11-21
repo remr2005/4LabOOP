@@ -32,15 +32,15 @@ namespace WpfApp1_task4_
             StringBuilder stringBuilder = new StringBuilder();
             if (MaterialList.SelectedItem is ListBoxItem materialItem)
             {
-                stringBuilder.Append($"Material: {(Material)Enum.Parse(typeof(Material), materialItem.Content.ToString())} ");
+                stringBuilder.Append($"Material: {Enum.Parse(typeof(Material), materialItem.Content.ToString())} ");
             }
             if (CrossList.SelectedItem is ListBoxItem crossSectionItem)
             {
-                stringBuilder.Append($"Cross-section: {(CrossSection)Enum.Parse(typeof(CrossSection), crossSectionItem.Content.ToString())} ");
+                stringBuilder.Append($"Cross-section: {Enum.Parse(typeof(CrossSection), crossSectionItem.Content.ToString())} ");
             }
             if (TestList.SelectedItem is ListBoxItem testResultItem)
             {
-                stringBuilder.Append($"Result: {(TestResult)Enum.Parse(typeof(TestResult), testResultItem.Content.ToString())}");
+                stringBuilder.Append($"Result: {Enum.Parse(typeof(TestResult), testResultItem.Content.ToString())}");
             }
             Result.Content = stringBuilder.ToString();
         }

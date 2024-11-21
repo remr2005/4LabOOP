@@ -11,7 +11,6 @@
         Composite,
         Titanium
     }
-
     /// <summary>
     /// Enumeration of girder cross-sections
     /// </summary>
@@ -22,7 +21,6 @@
         ZShaped,
         CShaped
     }
-
     /// <summary>
     /// Enumeration of test results
     /// </summary>
@@ -31,7 +29,6 @@
         Pass,
         Fail
     }
-
     /// <summary>
     /// Структура, содержащая результаты испытаний
     /// </summary>
