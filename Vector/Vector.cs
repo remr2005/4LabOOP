@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Common;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Vector
+﻿namespace Vector
 {
     /// <summary>
     /// Структура вектора
@@ -94,6 +86,5 @@ namespace Vector
         /// </summary>
         /// <returns></returns>
         public override int GetHashCode() => HashCode.Combine(x, y, z);
-
     }
 }

@@ -21,6 +21,6 @@ public class Program
         Vector3D velocityVector = new Vector3D(0, -7, 0);
         // Вычисление силы Кориолиса
         Vector3D coriolisForce = 2 * 70 * (velocityVector * omegaVector);
-        Console.WriteLine(coriolisForce.abs);
+        Console.WriteLine($"Сила Кориолиса: {coriolisForce.abs}");
     }
 }

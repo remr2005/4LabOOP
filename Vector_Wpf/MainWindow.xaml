@@ -33,8 +33,8 @@
         <TextBlock HorizontalAlignment="Left" Margin="20,254,0,0" TextWrapping="Wrap" Text="Coriolis Force" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="20,280,0,0" TextWrapping="Wrap" Text="Vector" VerticalAlignment="Top"/>
         <TextBox Name="V1" PreviewTextInput="TextBox_PreviewTextInput" HorizontalAlignment="Left" Margin="5,301,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="40"/>
-        <TextBox Name="V2" PreviewTextInput="TextBox_PreviewTextInput" HorizontalAlignment="Left" Margin="50,301,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="40"/>
-        <TextBox Name="V3" PreviewTextInput="TextBox_PreviewTextInput" HorizontalAlignment="Left" Margin="95,301,0,0" TextWrapping="Wrap" Text="7" VerticalAlignment="Top" Width="40"/>
+        <TextBox Name="V2" PreviewTextInput="TextBox_PreviewTextInput" HorizontalAlignment="Left" Margin="50,301,0,0" TextWrapping="Wrap" Text="7" VerticalAlignment="Top" Width="40"/>
+        <TextBox Name="V3" PreviewTextInput="TextBox_PreviewTextInput" HorizontalAlignment="Left" Margin="95,301,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="40"/>
         <TextBlock HorizontalAlignment="Left" Margin="211,280,0,0" TextWrapping="Wrap" Text="Weight" VerticalAlignment="Top"/>
         <TextBox Name="Weight" PreviewTextInput="TextBox_PreviewTextInput" HorizontalAlignment="Left" Margin="209,301,0,0" TextWrapping="Wrap" Text="70" VerticalAlignment="Top" Width="40"/>
         <TextBlock HorizontalAlignment="Left" Margin="7,333,0,0" TextWrapping="Wrap" Text="Result" VerticalAlignment="Top"/>
